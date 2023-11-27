@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('github clone') {
+      /*  stage('github clone') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/malleshdevops/devops17-eks.git']])
             }
-        }
+        }*/
         stage('terraform init') {
             steps {
               sh 'terraform init'    
